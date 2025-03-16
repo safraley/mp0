@@ -75,7 +75,7 @@ playBtn.addEventListener("click", () => (isPlaying ? pauseSong() : playSong()));
 function loadSong(song) {
 	title.textContent = song.displayName;
 	artist.textContent = song.artist;
-	music.src = `./music/Kings of Leon/Mechanical Bull (Deluxe)/${song.name}.m4a`;
+	music.src = `${song.name}.m4a`;
 	img.src = `./assets/${song.image}`;
 }
 

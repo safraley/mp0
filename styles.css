@@ -1,171 +1,41 @@
-html {
-	line-height: 1.5;
-	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-}
-p {
-	text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-wrap: balance;
-}
-h1 {
-	font-size: 4rem;
-	font-weight: 900;
-	line-height: 1.15;
-}
-h2 {
-	font-size: 3.5rem;
-	font-weight: 800;
-	line-height: 1.22;
-}
-h3 {
-	font-size: 3rem;
-	font-weight: 700;
-	line-height: 1.3;
-}
-h4 {
-	font-size: 2.5rem;
-	font-weight: 650;
-	line-height: 1.38;
-}
-h5 {
-	font-size: 2rem;
-	font-weight: 600;
-	line-height: 1.45;
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-	margin: 0 0 0.5rem 0;
-}
-body {
-	margin: 0;
-	min-height: 100vh;
-	background: #011020;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-.img-container {
-	width: 300px;
-	height: 300px;
-	position: relative;
-	top: -50px;
-	left: 50px;
-}
-.img-container > img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	border-radius: 20px;
-	box-shadow: 2px 2px 10px 10px rgba(246, 246, 247, 0.9;
-}
-.player-container {
-	height: 500px;
-	width: 400px;
-	position: absolute;
-	background: #cfcfd2;
-	border-radius: 20px;
-	padding-left: 0.5rem;
-	box-shadow: 0 15px 30px 5px rgb(0, 0, 0, 0.3);
-}
-/* Progress */
-.progress-container {
-	background: #fff;
-	border-radius: 5px;
-	cursor: pointer;
-	margin: 20px 20px 5px 10px;
-	height: 4px;
-	width: 90%;
-}
-.progress {
-	background: #0e0341;
-	border-radius: 5px;
-	height: 100%;
-	width: 0%;
-	transition: width 0.1s linear;
-}
-.duration-wrapper {
-	position: relative;
-	top: -35px;
-	display: flex;
-	justify-content: space-between;
-}
-.fas {
-	font-size: 30px;
-	color: rgb(129, 129, 129);
-	margin-right: 30px;
-	cursor: pointer;
-	user-select: none;
-}
-.fas:hover {
-	filter: brightness(10%);
-}
-.main-button {
-	font-size: 40px;
-	position: relative;
-	top: 3px;
-}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-@media screen and (max-width: 376px) {
-	.player-container {
-		width: 95vw;
-	}
-	.img-container {
-		/* width: 300px;
-		height: 300px;
-		position: relative;
-		top: -50px; */
-		left: 25px;
-	}
-	h2 {
-		font-size: 2rem;
-		text-align: center;
-	}
-	h5 {
-		font-size: 1.5rem;
-		text-align: center;
-	}
-}
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>musicPlayer</title>
+	</head>
+	<body>
+		<div class="player-container">
+			<!-- song -->
+			<div class="img-container">
+				<img src="./assets/Metal.jpg" alt="album art for the song" />
+			</div>
+			<h2 id="title">Beautiful War</h2>
+			<h5 id="artist">Kings of Leon</h5>
+			<audio
+				src="./music/Kings of Leon/Mechanical Bull (Deluxe)/04 Beautiful War.m4a"></audio>
+			<!-- Progress -->
+			<div class="progress-container" id="progress-container">
+				<div class="progress" id="progress"></div>
+				<div class="duration-wrapper">
+					<span id="current-time">0:00</span>
+					<span id="duration">5:08</span>
+				</div>
+			</div>
+			<!-- Controls -->
+			<div class="player-controls">
+				<i class="fas fa-backward" id="prev" title="Previous"></i>
+				<i class="fas fa-play main-button" id="play" title="Play"></i>
+				<i class="fas fa-forward" id="next" title="Next"></i>
+			</div>
+		</div>
+		<!-- Script -->
+		<script src="script.js"></script>
+	</body>
+</html>

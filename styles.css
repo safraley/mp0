@@ -82,7 +82,7 @@ h5 {
 body {
 	margin: 0;
 	min-height: 100vh;
-	background: #c9ced3;
+	background: #011020;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -100,13 +100,13 @@ body {
 	width: 100%;
 	object-fit: cover;
 	border-radius: 20px;
-	box-shadow: 0 15px 30px 5px rgb(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 10px 10px rgba(246, 246, 247, 0.9;
 }
 .player-container {
 	height: 500px;
 	width: 400px;
 	position: absolute;
-	background: #e7e7e7;
+	background: #cfcfd2;
 	border-radius: 20px;
 	padding-left: 0.5rem;
 	box-shadow: 0 15px 30px 5px rgb(0, 0, 0, 0.3);

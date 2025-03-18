@@ -51,7 +51,7 @@ let songs = [
 		name: `09 Tonight`,
 		displayName: `Tonight`,
 		artist: `Kings of Leon`,
-		image: `Temple.jpg`,
+		image: `Tonight.jpg`,
 	},
 ];
 

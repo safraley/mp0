@@ -47,6 +47,12 @@ let songs = [
 		artist: `Kings of Leon`,
 		image: `Wait for Me.png`,
 	},
+	{
+		name: `09 Tonight`,
+		displayName: `Tonight`,
+		artist: `Kings of Leon`,
+		image: `Temple.jpg`,
+	},
 ];
 
 // Check if Playing
